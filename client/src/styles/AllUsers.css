@@ -1,0 +1,225 @@
+.all-users-page {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    width: 100%;
+    padding: 15vh 4% 40px;
+}
+
+.all-users-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.all-users-header h3 {
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.users-count-badge {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.users-container {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.users-table-header {
+    display: grid;
+    grid-template-columns: 50px 1fr 1.5fr 1.5fr 100px;
+    gap: 20px;
+    padding: 15px 20px;
+    background: #f7fafc;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.users-table-header span {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #718096;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.user-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 65vh;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.user-cards::-webkit-scrollbar {
+    width: 8px;
+}
+
+.user-cards::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.user-cards::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border-radius: 10px;
+}
+
+.user-cards::-webkit-scrollbar-thumb:hover {
+    background: #a0aec0;
+}
+
+.user-card {
+    display: grid;
+    grid-template-columns: 50px 1fr 1.5fr 1.5fr 100px;
+    gap: 20px;
+    align-items: center;
+    background: #f7fafc;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.user-card:hover {
+    background: white;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transform: translateX(5px);
+}
+
+.user-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.user-info-label {
+    font-size: 0.75rem;
+    color: #a0aec0;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.user-info-value {
+    font-size: 0.95rem;
+    color: #2d3748;
+    font-weight: 500;
+    word-break: break-word;
+}
+
+.user-id {
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    color: #718096;
+}
+
+.user-orders-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.empty-users {
+    text-align: center;
+    padding: 60px 20px;
+    color: #718096;
+}
+
+.empty-users-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+.empty-users p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .users-table-header,
+    .user-card {
+        grid-template-columns: 45px 1fr 1.2fr 80px;
+    }
+    
+    .user-info:nth-child(4) {
+        display: none;
+    }
+    
+    .users-table-header span:nth-child(4) {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .all-users-page {
+        padding: 15vh 3% 30px;
+    }
+    
+    .all-users-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .users-container {
+        padding: 20px;
+    }
+    
+    .users-table-header {
+        display: none;
+    }
+    
+    .user-card {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 20px;
+    }
+    
+    .user-avatar {
+        margin: 0 auto;
+    }
+    
+    .user-info {
+        text-align: center;
+    }
+    
+    .user-orders-badge {
+        margin: 0 auto;
+    }
+}
+
